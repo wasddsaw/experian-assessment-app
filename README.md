@@ -16,29 +16,6 @@ The things you'll need in order to use the app and how to install them
 
 * Android Studio (version 2021.1)
 
-### Installation
-
-**Step 1:**
-
-Clone this repo by using the link below:
-
-```
-git clone https://github.com/wasddsaw/tmrnd-choc-app.git
-```
-
-**Step 2:**
-
-- Go to project [tmrnd-choc-api](https://github.com/wasddsaw/tmrnd-choc-api) and follow instruction from README.
-
-**Step 3:**
-
-Go to project root and execute the following command in console to get the required dependencies: 
-
-```zsh
-% flutter pub get
-% flutter run
-```
-
 ## Built with
 
 * Android Native Kotlin - The programming language used
