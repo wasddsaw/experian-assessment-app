@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "178129278314",
+    "project_id": "experian-firebase-auth",
+    "storage_bucket": "experian-firebase-auth.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:178129278314:android:dc541117e74910a3acc113",
+        "android_client_info": {
+          "package_name": "com.example.experianfirebaseauth"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBpDR6pI-BvUVTsurlwW-lJsTA-r8ay0so"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
