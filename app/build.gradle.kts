@@ -7,8 +7,15 @@ plugins {
 }
 
 android {
+
     namespace = "com.example.experianfirebaseauth"
     compileSdk = 34
+
+    packaging {
+        jniLibs {
+            excludes += "mockito-extensions/org.mockito.plugins.MockMaker"
+        }
+    }
 
     defaultConfig {
         applicationId = "com.example.experianfirebaseauth"
@@ -43,11 +50,27 @@ android {
 
 dependencies {
 
+    androidTestImplementation(libs.mockito.android)
+    androidTestImplementation(libs.mockito.kotlin.v410)
+
+//    androidTestImplementation(libs.dexmaker)
+//    androidTestImplementation(libs.dexmaker.mockito)
+
+    // Test
+    testImplementation(libs.junit)
+    testImplementation(libs.mockito.core)
+    testImplementation(libs.mockito.inline)
+    testImplementation(libs.mockito.kotlin)
+    testImplementation(libs.androidx.core.testing)
+    testImplementation(libs.kotlinx.coroutines.test)
+
     // Hilt
     implementation(libs.hilt.android)
     implementation(libs.androidx.annotation)
     implementation(libs.androidx.lifecycle.livedata.ktx)
     implementation(libs.androidx.lifecycle.viewmodel.ktx)
+    androidTestImplementation(libs.androidx.core.testing)
+    androidTestImplementation(libs.androidx.core.testing)
     kapt(libs.hilt.android.compiler)
 
     // Firebase

@@ -7,18 +7,21 @@ import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.ViewModelProvider
 import com.example.experianfirebaseauth.viewmodel.AuthenticateUser
-import com.example.experianfirebaseauth.viewmodel.LoginViewModel
+import com.google.firebase.auth.FirebaseAuth
 
 class LoginActivity : AppCompatActivity() {
-
-    private val loginViewModel: LoginViewModel by viewModels()
     private val authenticateUser: AuthenticateUser by viewModels()
+
+    lateinit var auth: FirebaseAuth
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_login)
+
+        auth = FirebaseAuth.getInstance()
 
         val editTextEmail = findViewById<EditText>(R.id.editTextEmail)
         val editTextPassword = findViewById<EditText>(R.id.editTextPassword)
@@ -33,8 +36,6 @@ class LoginActivity : AppCompatActivity() {
             val email = editTextEmail.text.toString().trim()
             val password = editTextPassword.text.toString().trim()
             authenticateUser.login(email, password)
-
-            // loginViewModel.login(email, password)
         }
     }
 }

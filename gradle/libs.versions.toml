@@ -1,5 +1,7 @@
 [versions]
 agp = "8.6.1"
+coreTesting = "2.2.0"
+dexmakerMockito = "2.28.1"
 firebaseBom = "33.5.1"
 hiltAndroid = "2.51.1"
 hiltAndroidCompiler = "2.51.1"
@@ -9,15 +11,24 @@ junit = "4.13.2"
 junitVersion = "1.1.5"
 espressoCore = "3.5.1"
 appcompat = "1.6.1"
+kotlinxCoroutinesTest = "1.6.4"
 material = "1.10.0"
 activity = "1.9.3"
 constraintlayout = "2.1.4"
 annotation = "1.6.0"
 lifecycleLivedataKtx = "2.8.7"
 lifecycleViewmodelKtx = "2.8.7"
+mockitoAndroid = "4.5.1"
+mockitoCore = "4.6.1"
+mockitoInline = "4.6.1"
+mockitoKotlin = "4.0.0"
+mockitoKotlinVersion = "4.1.0"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+androidx-core-testing = { module = "androidx.arch.core:core-testing", version.ref = "coreTesting" }
+dexmaker = { module = "com.linkedin.dexmaker:dexmaker", version.ref = "dexmakerMockito" }
+dexmaker-mockito = { module = "com.linkedin.dexmaker:dexmaker-mockito", version.ref = "dexmakerMockito" }
 firebase-auth = { module = "com.google.firebase:firebase-auth" }
 firebase-bom = { module = "com.google.firebase:firebase-bom", version.ref = "firebaseBom" }
 hilt-android = { module = "com.google.dagger:hilt-android", version.ref = "hiltAndroid" }
@@ -26,12 +37,18 @@ junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
 androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
 androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+kotlinx-coroutines-test = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-test", version.ref = "kotlinxCoroutinesTest" }
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
 androidx-activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
 androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
 androidx-annotation = { group = "androidx.annotation", name = "annotation", version.ref = "annotation" }
 androidx-lifecycle-livedata-ktx = { group = "androidx.lifecycle", name = "lifecycle-livedata-ktx", version.ref = "lifecycleLivedataKtx" }
 androidx-lifecycle-viewmodel-ktx = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-ktx", version.ref = "lifecycleViewmodelKtx" }
+mockito-android = { module = "org.mockito:mockito-android", version.ref = "mockitoAndroid" }
+mockito-core = { module = "org.mockito:mockito-core", version.ref = "mockitoCore" }
+mockito-inline = { module = "org.mockito:mockito-inline", version.ref = "mockitoInline" }
+mockito-kotlin = { module = "org.mockito.kotlin:mockito-kotlin", version.ref = "mockitoKotlin" }
+mockito-kotlin-v410 = { module = "org.mockito.kotlin:mockito-kotlin", version.ref = "mockitoKotlinVersion" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
